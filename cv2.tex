@@ -17,6 +17,7 @@
 \definecolor{subheadings}{HTML}{333333} % The color of subsections and places worked/studied
 \definecolor{date}{HTML}{666666} % The color used for the Last Updated text at the top right
 
+\usepackage{todonotes}
 \usepackage{xltxtra}
 \usepackage{xunicode}
 \usepackage{xgreek}
@@ -49,41 +50,61 @@
 \setlength{\vcolumnsep}{\baselineskip}
 \setlength{\columnsep}{\vcolumnsep}
 
-% frame setup (flowfram package)
+%% frame setup (flowfram package)
+%% left frame
+%\newflowframe{0.2\textwidth}{\textheight}{0pt}{0pt}[left]
+%	\newlength{\LeftMainSep}
+%	\setlength{\LeftMainSep}{0.2\textwidth}
+%	\addtolength{\LeftMainSep}{2\columnsep}
+%% right frame
+%\newflowframe{0.7\textwidth}{\textheight}{\LeftMainSep}{0pt}[main01]
+%
+%% horizontal rule between frames (using TikZ)
+%\renewcommand{\ffvrule}[3]{%
+%\hfill
+%\tikz{%
+%	\draw[loosely dotted,color=RoyalBlue,line width=1.5pt,yshift=-#1] 
+%	(0,0) -- (0pt,#3);}%
+%\hfill\mbox{}}
+%\insertvrule{flow}{1}{flow}{2}
+
 % left frame
 \newflowframe{0.2\textwidth}{\textheight}{0pt}{0pt}[left]
-	\newlength{\LeftMainSep}
-	\setlength{\LeftMainSep}{0.2\textwidth}
-	\addtolength{\LeftMainSep}{2\columnsep}
+\newlength{\LeftMainSep}
+\setlength{\LeftMainSep}{0.2\textwidth}
+\addtolength{\LeftMainSep}{1\columnsep}
+
+% small static frame for the vertical line
+\newstaticframe{1.5pt}{\textheight}{\LeftMainSep}{0pt}
+
+% content of the static frame
+\begin{staticcontents}{1}
+	\hfill
+	\tikz{%
+		\draw[loosely dotted,color=RoyalBlue,line width=1.5pt,yshift=0]
+		(0,0) -- (0,\textheight);}%
+	\hfill\mbox{}
+\end{staticcontents}
+
 % right frame
+\addtolength{\LeftMainSep}{1.5pt}
+\addtolength{\LeftMainSep}{1\columnsep}
 \newflowframe{0.7\textwidth}{\textheight}{\LeftMainSep}{0pt}[main01]
-
-% horizontal rule between frames (using TikZ)
-\renewcommand{\ffvrule}[3]{%
-\hfill
-\tikz{%
-	\draw[loosely dotted,color=RoyalBlue,line width=1.5pt,yshift=-#1] 
-	(0,0) -- (0pt,#3);}%
-\hfill\mbox{}}
-\insertvrule{flow}{1}{flow}{2}
-
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % define macros (for convience)
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\newcommand{\Sep}{\vspace{1.3em}}
-\newcommand{\SmallSep}{\vspace{0.4em}}
+\newcommand{\Sep}{\vspace{0.75em}}
+\newcommand{\SmallSep}{\vspace{0.25em}}
 
 \newenvironment{AboutMe}
 	{\ignorespaces\textbf{\color{RoyalBlue} \textbullet{}}}
-	{\Sep\ignorespacesafterend}
+	%{\Sep\ignorespacesafterend}
 	
 \newcommand{\CVSection}[1]
 	{\Large{#1}\par
 	\SmallSep\normalsize\normalfont}
 
-%\newcommand{\CVItem}[2]
-%	{\textbf{\color{RoyalBlue} #1} | \color{subheadings}\fontspec[Path = fonts/]{cfjerg}\fontsize{11pt}{13pt}\selectfont {#2} \normalfont} 
 
 \newcommand{\CVItem}[2]
 	{\textbf{\color{RoyalBlue} #1} #2}
@@ -115,6 +136,7 @@
 \small
 	Παπαχρήστου Μιχάλης \\
 	\url{mighalis@gmail.com}  \\
+	\url{github.com/Mixpap} \\
 	τηλ. 6936741032
 \end{flushright}\normalsize
 \framebreak
@@ -134,13 +156,11 @@
 
 % Experience
 \CVSection{Εργασιακή Εμπειρία}
-%\CVItem{ΟΤΕ}{Τηλεφωνητής στο τμήμα Μάρκετινγκ}
-%\location{Σεπτέμβρης 2009 – Σεπτέμβρης 2010}
 
 \SmallSep
 
 \CVItem{Aπασχόληση σε πλήθος διαφορετικών εργασιακών χώρων}{\newline}
-\location{Eστίαση 2007-2012, Tηλεφωνική Yποστήριξη 2009-2010 κ.α.}
+\location{Eστίαση 2007-2013, Tηλεφωνική Yποστήριξη 2009-2010 κ.α.}
 
 
 \CVItem{Ιδιαίτερα Μαθήματα}{}
@@ -162,11 +182,11 @@
 \SmallSep
 
 \CVItem{Πτυχίο Φυσικής Σχολής Θετικών Επιστημών του Πανεπιστήμιο Αθηνών}{\newline}
-\location{Αναμένεται το Δεκέμβριο του 2014}
+\location{Αναμένεται το Δεκέμβριο του 2014}\todo{Βαθμος Πτυχίου}
 \SmallSep
 
-\CVItem{Πτυχιακή εργασία στο Τμήμα Φυσικής:}{The importance of molecular outflows as feedback mechanism: W3 G.M.C. Case Study. \newline}
-\location{Αναμένεται να ολοκληρωθεί το Δεκέμβριο του 2014}
+\CVItem{Πτυχιακή εργασία στο Τμήμα Φυσικής: Τα φυσικά χαρακτηριστικά των μοριακών εκροών στο νεφέλωμα W3 \newline}
+\location{}
 \SmallSep
 
 
@@ -174,47 +194,47 @@
 \CVSection{Δεξιότητες}
 \CVItem{Προγραμματισμός:}{}
 \begin{tightitemize}
-\item Μέση εμπειρία ανάπτυξης επιστημονικού και στατιστικού προγραμματισμού (Scientific-Statistical Computing), μεθόδους ανάλυσης-επεξεργασίας δεδομένων (Data Analysis) και βασικές μέθοδους Μηχανικής Μάθησης (Machine Learning) στις γλώσσες \textbf{Python}  \textbullet{} \textbf{Julia} \textbullet{} \textbf{R} \textbullet{} \textbf{Matlab} και στο συστημα στοιχειοθεσίας  \LaTeX\ 
+\item Μέση εμπειρία ανάπτυξης επιστημονικού και στατιστικού προγραμματισμού (Scientific-Statistical Computing), μεθόδους ανάλυσης-επεξεργασίας δεδομένων (Data Analysis) και βασικές μεθόδους Μηχανικής Μάθησης (Machine Learning) στις γλώσσες \textbf{Python}  \textbullet{} \textbf{Julia} \textbullet{} \textbf{R} \textbullet{} \textbf{Matlab}
+\item Εξοικείωση με το σύστημα στοιχειοθεσίας \LaTeX\ παράλληλα με στοιχειώδεις γνώσεις γραφιστικής και στοιχειοθεσίας με τα πακέτα \textbf{Inkscape} \textbullet{} \textbf{Adobe Illustrator} \textbullet{} \textbf{Xara} \textbullet{} \textbf{Corel Draw}
 \item Βασικές γνώσεις ανάπτυξης λογισμικού σε: C \textbullet{} C++ \textbullet{} Java \textbullet{} Fortran \textbullet{} Assembly 
 \item Εξοικείωση με λειτουργικά συστήματα \textbf{Linux} και \textbf{BSD}
-\item Βασική εξοικείωση με το σύστημα κατανεμημένου ελέγχου (distributed revision system) \textbf{Git}
+\item Εξοικείωση με το σύστημα κατανεμημένου ελέγχου (distributed revision system) \textbf{Git} - \textbf{GitHub}
 \end{tightitemize}
 \SmallSep
 
 \CVSection{Ερευνητικά Ενδιαφέροντα}
+\CVItem{Πρακτική Άσκηση}{}
+\begin{tightitemize}
+	\item «Εφαρμογή Τεχνητών Νευρωνικών Δικτύων (ANN) στην ταξινόμηση και παραμετροποίηση φασμάτων γαλαξιών» \\
+	\location{Νοέμβρης-Δεκέμβρης 2014 | Ινστιτούτο Αστρονομίας, Αστροφυσικής, Διαστημικών Εφαρμογών \& Τηλεπισκόπησης, Εθνικό Αστεροσκοπείο Αθηνών | Επιβλέπων: Δρ. Ιωάννης Μπέλλας-Βελίδης}
+\end{tightitemize}
 \CVItem{Σχολεία - Workshops}{}
 \begin{tightitemize}
 \item Statistical analysis of astronomical data sets \\
-\location{3-7 June 2013 | Πανεπιστήμιο Αθηνών, τμήμα Φυσικής}
+\location{3-7 Ιουνίου 2013 | Πανεπιστήμιο Αθηνών, τμήμα Φυσικής}
 \item The Role and the Origin of Magnetic Fields in Astrophysics \\
 \location{11-12 Μαρτίου 2013 | Ακαδημία Αθηνών}
+\item The Unification Model of Active Galactic Nuclei \\
+\location{4-5 Δεκεμβρίου 2014 | 5ο Χειμερινό Σχολείο Αστροφυσικής του Εθνικού Αστεροσκοπείου Αθηνών | Πανεπιστήμιο Αθηνών, τμήμα Φυσικής}
 \end{tightitemize}
 \SmallSep
 
+%=========================================================
+\clearpage
+\framebreak
+\framebreak
+%=======================================================
+
 \CVItem{Παρακολούθηση Σεμιναρίων}{}
 \begin{tightitemize}
-\item Ομάδα Αστροφυσικής του Πανεπιστημίου Αθηνών \location{2010-2014}
+\item Ομάδα Αστροφυσικής του Πανεπιστημίου Αθηνών \location{2010-2015}
 \item Κέντρο Ερευνών Αστρονομίας και Εφαρμοσμένων Μαθηματικών της Ακαδημίας Αθηνών \location{2009-2012}
-\item Σεμινάρια Θεωρίας Γραφημάτων στο τμήμα Μαθηματικών (Μεταπτυχιακό Πρόγραμμα Λογικής και Αλγορίθμων) \location{2012}
+\item Εθνικό Αστεροσκοπείο Αθηνών (ΙΑΑΔΕΤ) \location{2014-2015}
+%\item Σεμινάρια Θεωρίας Γραφημάτων στο τμήμα Μαθηματικών (Μεταπτυχιακό Πρόγραμμα Λογικής και Αλγορίθμων) \location{2012}
 \item Σεμινάρια ανοιχτού λογισμικού στο τμήμα πληροφορικής του Πανεπιστημίου Πειραιά \location{2006}
 \end{tightitemize}
 \SmallSep
 
-%\CVItem{Computer software}{}
-%\begin{multicols}{3}
-%\begin{compactitem}[\color{RoyalBlue}$\circ$]
-%	\item Lorem 
-%	\item Ipsum 
-%	\item Dolor 
-%	\item Sit 
-%	\item Amet
-%	\item Consectetur 
-%	\item Adipiscing 
-%	\item Elit
-%	\item \ldots
-%\end{compactitem}
-%\end{multicols}
-%\Sep 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % End document
