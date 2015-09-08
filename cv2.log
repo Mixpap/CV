@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.1415926-2.4-0.9998 (TeX Live 2012/Debian) (format=xelatex 2014.9.22)  8 SEP 2015 12:11
+This is XeTeX, Version 3.1415926-2.4-0.9998 (TeX Live 2012/Debian) (format=xelatex 2014.9.22)  8 SEP 2015 19:50
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1460,16 +1460,16 @@ Overfull \hbox (9.62666pt too wide) in paragraph at lines 197--198
  []
 
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <12> on input line 198.
+(Font)              <12> on input line 205.
 
-Overfull \hbox (2.63467pt too wide) in paragraph at lines 198--199
-\EU1/cfjerg(0)/m/n/12 χειώδεις γνώσεις γραφιστικής κ
-αι στοιχειοθεσίας με τα πακέτα \EU1/cfjerg(0)/bx/n/12
- Inkscape
+Overfull \hbox (3.23468pt too wide) in paragraph at lines 206--207
+[]\EU1/cfjerg(0)/m/n/12 Βασικές γνώσεις γραφιστικής κ
+αι εφαρμογή μέσω των πακέτων \EU1/cfjerg(0)/bx/n/12 Ink
+scape
  []
 
 
-Overfull \hbox (1.41302pt too wide) in paragraph at lines 217--219
+Overfull \hbox (1.41302pt too wide) in paragraph at lines 222--224
 []\EU1/cfjerg(0)/m/n/10.95 4-5 Δεκεμβρίου 2014 | 5ο Χειμεριν
 ό Σχολείο Αστροφυσικής του Εθνικού Αστε-
  []
@@ -1480,10 +1480,10 @@ Overfull \hbox (1.41302pt too wide) in paragraph at lines 217--219
 
 Package flowfram Warning: Moving to flow frame of unequal width,
 (flowfram)                use of \framebreak advised, or text might not appear 
-correctly on input line 223.
+correctly on input line 228.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 225--227
+Underfull \hbox (badness 10000) in paragraph at lines 230--232
 
  []
 
@@ -1496,13 +1496,13 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 Package flowfram Warning: Moving to flow frame of unequal width,
 (flowfram)                use of \framebreak advised, or text might not appear 
-correctly on input line 242.
+correctly on input line 247.
 
 (./cv2.aux) ) 
 Here is how much of TeX's memory you used:
  27448 strings out of 495684
  541976 string characters out of 3187468
- 593431 words of memory out of 3000000
+ 594431 words of memory out of 3000000
  30232 multiletter control sequences out of 15000+200000
  7444 words of font info for 45 fonts, out of 3000000 for 9000
  14 hyphenation exceptions out of 8191
