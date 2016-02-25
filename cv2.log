@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99992 (TeX Live 2015/Debian) (preloaded format=xelatex 2015.12.9)  25 FEB 2016 21:44
+This is XeTeX, Version 3.14159265-2.6-0.99992 (TeX Live 2015/Debian) (preloaded format=xelatex 2015.12.9)  25 FEB 2016 22:08
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1450,21 +1450,21 @@ Underfull \hbox (badness 10000) in paragraph at lines 147--149
  []
 
 
-Overfull \hbox (3.91011pt too wide) in paragraph at lines 191--194
+Overfull \hbox (3.91011pt too wide) in paragraph at lines 195--198
 [][]\EU1/cfjerg(0)/bx/n/10.95 Μεταπτυχιακό πρόγραμμα Αστροφυσικής-Αστρονομίας-Μ
 ηχανικής στο τμήμα
  []
 
 
-Overfull \hbox (9.62671pt too wide) in paragraph at lines 201--202
+Overfull \hbox (9.62671pt too wide) in paragraph at lines 205--206
 \EU1/cfjerg(0)/m/n/12 σμού (Scientific-Statistical Computing), μεθόδους ανάλυση
 ς-επεξεργασίας
  []
 
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <12> on input line 209.
+(Font)              <12> on input line 213.
 
-Overfull \hbox (3.2347pt too wide) in paragraph at lines 210--211
+Overfull \hbox (3.2347pt too wide) in paragraph at lines 214--215
 []\EU1/cfjerg(0)/m/n/12 Βασικές γνώσεις γραφιστικής και εφαρμογή μέσω των πακέτ
 ων \EU1/cfjerg(0)/bx/n/12 Inkscape
  []
@@ -1472,7 +1472,7 @@ Overfull \hbox (3.2347pt too wide) in paragraph at lines 210--211
 [1
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 224--226
+Underfull \hbox (badness 10000) in paragraph at lines 228--230
 
  []
 
@@ -1480,7 +1480,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 224--226
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
-Overfull \hbox (1.41301pt too wide) in paragraph at lines 233--235
+Overfull \hbox (1.41301pt too wide) in paragraph at lines 237--239
 []\EU1/cfjerg(0)/m/n/10.95 4-5 Δεκεμβρίου 2014 | 5ο Χειμερινό Σχολείο Αστροφυσι
 κής του Εθνικού Αστε-
  []
